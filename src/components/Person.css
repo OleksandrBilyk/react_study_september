@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Mooli&family=Sofia+Sans+Condensed&family=Young+Serif&display=swap');
+.person{
+    height: 31vh;
+    width: 30vw;
+    margin: 1vh 1vw;
+    display: grid;
+    border: dodgerblue 1px solid;
+    border-radius: 10px;
+    grid-template-areas:
+    "id name name"
+    "image image image"
+    "status species gender"
+;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 6fr 1fr;
+}
+.id{
+    grid-area: id;
+    margin: 10px 10px;
+    font-family: "Century Gothic", sans-serif;
+    font-size: 0.6em;
+}
+.name{
+    grid-area: name;
+    font-family: 'Young Serif', serif;
+    font-size: 0.7em;
+}
+.status{
+    margin: 5px 0 0 5px;
+    grid-area: status;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 0.6em;
+}
+.species{
+    margin: 2px 0 0 0;
+    grid-area: species;
+    font-family: 'Dancing Script', cursive;
+    font-size: 0.8em;
+}
+.gender{
+    margin: 5px 5px 0 0;
+    grid-area: gender;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 0.6em;
+}
+.image{
+    grid-area: image;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image>img{
+    width: auto;
+    height: 20vh;
+}
