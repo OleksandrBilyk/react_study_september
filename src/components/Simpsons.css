@@ -1,0 +1,8 @@
+.photo{
+    height: 30vh;
+    width: 20vw;
+}
+.photo>img{
+    max-height: 100%;
+    width: auto;
+}
