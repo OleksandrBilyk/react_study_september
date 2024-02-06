@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+
+.Launch{
+    height: 25vh;
+    width: 98vw;
+    display: flex;
+    justify-content: space-around;
+}
+.info{
+    height: 25vh;
+    width: 38vw;
+}
+.info>h4{
+    font-family: 'Tilt Neon', sans-serif;
+    font-size: 1.2em;
+}
+.info>p{
+    font-family: "Times New Roman", sans-serif;
+    font-size: 1em;
+}
+.picture>img{
+    width: auto;
+    height: 20vh;
+}
