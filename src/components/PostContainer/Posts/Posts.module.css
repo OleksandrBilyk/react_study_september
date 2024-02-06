@@ -1,0 +1,6 @@
+.Posts{
+    height: auto;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+}

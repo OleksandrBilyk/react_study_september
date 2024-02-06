@@ -1,0 +1,20 @@
+.Post{
+    margin: 5px;
+    height: 16vh;
+    width: 14vw;
+    background: white;
+    border: darkviolet 1px dashed;
+    position: relative;
+}
+.Post>p{
+    margin: 0 1vw 0 0;
+    font-family: "Century Gothic", sans-serif;
+    font-size: 0.6em;
+}
+button{
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    background: #d39696;
+    border: #d39000 1px solid;
+}
