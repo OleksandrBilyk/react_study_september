@@ -1,0 +1,9 @@
+.form_comment{
+    margin: 1vh 10vw;
+    height: auto;
+    width: 80vw;
+}
+.name{
+    font-family: "Britannic Bold", cursive;
+    font-size: 1.4em;
+}

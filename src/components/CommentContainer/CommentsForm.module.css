@@ -1,0 +1,16 @@
+.field_comment{
+    display: flex;
+    flex-direction: column;
+}
+.name{
+    margin-bottom: 10px;
+    width: 30vw;
+}
+.email{
+    margin-left: 4vw;
+    width: 40vw;
+}
+.body{
+    margin-bottom: 10px;
+    height: 10vh;
+}
