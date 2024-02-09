@@ -9,6 +9,7 @@ const UsersForm = ({setUsers}) => {
     const save = async (user) => {
         const {data} = await usersService.creating(user);
         setUsers(prev =>[...prev, data])
+        reset()
     }
 
     return (

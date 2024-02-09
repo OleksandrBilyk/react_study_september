@@ -1,7 +1,9 @@
 import {useForm} from "react-hook-form";
+import {useEffect} from "react";
 
 import {commentsService} from "../../services/commentsService";
 import style from "./CommentsForm.module.css"
+
 
 const CommentsForm = ({setComments}) => {
 
@@ -9,7 +11,9 @@ const CommentsForm = ({setComments}) => {
     const save = async (comment) => {
         const {data} = await commentsService.creating(comment);
         setComments(prev =>[...prev, data])
+        reset()
     }
+
 
     return (
         <div >
