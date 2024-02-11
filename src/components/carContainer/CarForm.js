@@ -6,19 +6,12 @@ import {carService} from "../../services/carService";
 import {carValidator} from "../../validators/carValidator";
 
 
-const CarForm = ({setTrigger, carForUpdate, carForDelete}) => {
+const CarForm = ({setTrigger, carForUpdate, setCarForUpdate}) => {
     const {register, reset, handleSubmit, formState: {isValid, errors}, setValue} = useForm({
         mode: 'all',
         resolver: joiResolver(carValidator)
     });
 
-    useEffect(() => {
-        if (carForDelete) {
-            carService.deleteById(carForDelete.id)
-            setTrigger(prev => !prev)
-            reset()
-        }
-    }, [carForDelete])
 
     useEffect(() => {
         if (carForUpdate) {
@@ -27,12 +20,13 @@ const CarForm = ({setTrigger, carForUpdate, carForDelete}) => {
             setValue('year', carForUpdate.year, {shouldValidate: true})
 
         }
-    }, [carForUpdate])
+    }, [carForUpdate, setValue])
 
     const save = async (car) => {
         console.log(car);
         if (carForUpdate){
             await carService.updateById(carForUpdate.id, car);
+            setCarForUpdate(null)
         } else {
             await carService.creating(car);
         }

@@ -1,9 +1,9 @@
 import {Car} from "./Car";
 
-const Cars = ({cars, setCarForUpdate, setCarForDelete}) => {
+const Cars = ({cars, setTrigger, setCarForUpdate}) => {
     return (
         <div>
-            {cars.map(car=><Car key={car.id} car={car} setCarForUpdate={setCarForUpdate} setCarForDelete={setCarForDelete}/>)}
+            {cars.map(car=><Car key={car.id} car={car} setTrigger={setTrigger} setCarForUpdate={setCarForUpdate}/>)}
         </div>
     );
 };
