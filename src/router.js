@@ -15,7 +15,7 @@ const router = createBrowserRouter([
             {path: 'users/user-details/:userId', element: <UserDetailsPage/>, children:[
                     {path: ':userId', element: <PostsPage/>, loader: ({params:{userId}})=>postService.getByUserId(userId)}
                 ]},
-            {path: 'users/user-details/:userId/:userId/post-details/:postId', element: <PostDetailPage/>, loader: ({params:{postId}})=>postService.getByPostId(postId)}
+            {path: 'post-details/:postId', element: <PostDetailPage/>, loader: ({params:{postId}})=>postService.getByPostId(postId)}
 
         ]
     }

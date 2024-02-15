@@ -9,7 +9,7 @@ const Post = ({post}) => {
     return (
         <div className={style.post_block}>
             <div>title: {title}</div>
-            <button onClick={()=>navigate(`post-details/${id}`, {state: post})}>Details</button>
+            <button onClick={()=>navigate(`/post-details/${id}`, {state: post})}>Details</button>
         </div>
     );
 };
