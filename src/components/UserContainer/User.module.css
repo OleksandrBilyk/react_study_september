@@ -1,0 +1,39 @@
+.users{
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.user{
+    margin: 0 15px 15px 0;
+    height: 26vh;
+    width: 20vw;
+    border: blue 2px solid;
+    background-color: dodgerblue;
+    position: relative;
+}
+.image{
+    left: 0;
+    bottom: 0;
+    position: absolute;
+}
+.button{
+    right: 0;
+    bottom: 0;
+    position: absolute;
+}
+.user_card{
+    margin: 0 6vw 15px 26vw;
+    padding: 15px;
+    height: 30vh;
+    width: 40vw;
+    border: #9f9b2b 2px solid;
+    background-color: #fdf710;
+    position: relative;
+}
+.button_post{
+    right: 5vw;
+    top: 15vh;
+    position: absolute;
+}

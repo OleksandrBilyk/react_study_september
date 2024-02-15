@@ -1,0 +1,7 @@
+.post_block{
+    margin: 0 10px 10px 0;
+    height: 6vh;
+    width: 95vw;
+    border: blue 2px solid;
+    background-color: dodgerblue;
+}
