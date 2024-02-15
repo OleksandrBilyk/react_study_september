@@ -15,7 +15,7 @@ const UserDetailsPage = () => {
         } else {
             userService.getByUserId(userId).then(({data}) => setUser(data))
         }
-    }, [userId, state])
+    }, [userId])
 
     return (
         <div>
