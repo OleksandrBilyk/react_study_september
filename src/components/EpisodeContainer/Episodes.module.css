@@ -1,0 +1,22 @@
+.Episodes_box{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fdf710;
+    height: 85vh;
+    width: 100vw;
+}
+.episode_box{
+    margin: 1vh 0 0 1vw;
+    padding: 5px 5px;
+    height: 18vh;
+    width: 18vw;
+    font-size: 0.8em;
+    border: #0022ff 1px solid;
+    border-radius: 15px;
+}
+.buttons{
+    height: 5vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+}
