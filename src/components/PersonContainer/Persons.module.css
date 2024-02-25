@@ -1,0 +1,8 @@
+.Characters{
+    width: 99vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+.Character{
+    margin-right: 2vw;
+}
