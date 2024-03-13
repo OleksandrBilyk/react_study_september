@@ -1,12 +1,12 @@
 const baseURL = 'https://rickandmortyapi.com/api'
 
-const episode = '/episode'
-const character = '/character'
+const episodes = '/episode'
+const characters = '/character'
 
 const urls = {
-    episode,
-    character: {
-        byIds: (idcharacters) => `${character}/${idcharacters}`
+    episodes,
+    characters: {
+        byIds: (ids) => `${characters}/${ids}`
     }
 }
 export {

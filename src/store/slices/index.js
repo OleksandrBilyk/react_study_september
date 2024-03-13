@@ -1,1 +1,2 @@
-export * from "./episodeSlice"
+export * from "./episodesSlice"
+export * from './charactersSlice'

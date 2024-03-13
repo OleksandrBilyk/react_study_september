@@ -1,2 +1,2 @@
 export * from "./characterPage"
-export * from "./episodePage"
+export * from "./episodesPage"

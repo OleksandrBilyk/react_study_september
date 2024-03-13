@@ -1,17 +1,18 @@
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
-import {episodeService} from "../../services";
+import {episodesService} from "../../services";
 
 const initialState = {
-    prev:null,
-    next:null,
-    episode:null
+    prev: null,
+    next: null,
+    episodes: []
 }
 
 const getAll = createAsyncThunk(
-    'episodeSlice/getAll',
+    'episodesSlice/getAll',
     async ({page}, thunkAPI) =>{
         try {
-            const {data} = await episodeService.getAll(page);
+            const {data} = await episodesService.getAll(page);
+
             return data
         }catch (e) {
             return thunkAPI.rejectWithValue(e.response.data)
@@ -20,29 +21,30 @@ const getAll = createAsyncThunk(
 
 )
 
-const episodeSlice = createSlice({
-    name:'episodeSlice',
+const episodesSlice = createSlice({
+    name:'episodesSlice',
     initialState,
     reducers:{
     },
     extraReducers: builder =>
         builder
             .addCase(getAll.fulfilled, (state, action)=>{
-                const {info:{prev, next}, result} = action.payload;
+                const {info:{prev, next}, results} = action.payload;
                 state.prev = prev
                 state.next = next
-                state.episode = result
+                state.episodes = results
+
             })
 })
 
-const {reducer:episodeReducer, actions} = episodeSlice;
+const {reducer:episodesReducer, actions} = episodesSlice;
 
-const episodeActions = {
+const episodesActions = {
     ...actions,
     getAll
 }
 
 export {
-    episodeReducer,
-    episodeActions
+    episodesReducer,
+    episodesActions
 }

@@ -2,7 +2,7 @@ import {apiService} from "./apiService";
 import {urls} from "../constant";
 
 const characterService = {
-    getById: (id) => apiService.get(urls.character.byIds(id))
+    getByIds: (ids) => apiService.get(urls.characters.byIds(ids))
 
 }
 
